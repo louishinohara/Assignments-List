@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+
+</head>
+
+<body>
+
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+
+        <form id="add-cafe-form"></form>
+
+        <ul id="cafe-list"></ul>
+
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBzrIYJLAFzJr9lkrZ0-i22IWJeK16AqDI",
+            authDomain: "cafe-review-68c79.firebaseapp.com",
+            databaseURL: "https://cafe-review-68c79.firebaseio.com",
+            projectId: "cafe-review-68c79",
+            storageBucket: "cafe-review-68c79.appspot.com",
+            messagingSenderId: "805820697085",
+            appId: "1:805820697085:web:e2144d4272f43e294c7194",
+            measurementId: "G-8ZJZYS1KGW"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({timestampsInSnapshots: true })
+        firebase.analytics();
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
